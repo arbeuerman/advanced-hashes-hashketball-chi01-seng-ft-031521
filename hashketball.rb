@@ -261,14 +261,7 @@ def most_points_scored
 end 
 
 def get_total_points
-  
-end 
-
-def winning_team
   game_stats = game_hash
-  max_score = 0 
-  winner = ""
-  
   team_scores = {}
   game_stats.each do |side, data|
     points_scored = 0 
@@ -277,6 +270,13 @@ def winning_team
     end
     team_scores[data[:team_name]] = points_scored
   end
+  team_scores
+end 
+
+def winning_team
+  max_score = 0 
+  winner = ""
+  team_scores = get_total_points
   team_scores.each do |name, score|
     if score > max_score  
       max_score = score 
