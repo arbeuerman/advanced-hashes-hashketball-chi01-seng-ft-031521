@@ -215,8 +215,6 @@ def get_largest_shoe_player(game_stats)
   player 
 end 
 
-puts get_largest_shoe_player(game_hash)
-
 def big_shoe_rebounds
   game_stats = game_hash  
   player = get_largest_shoe_player(game_stats)
