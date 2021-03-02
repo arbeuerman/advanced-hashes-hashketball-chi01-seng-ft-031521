@@ -274,6 +274,7 @@ def winning_team
   end
   team_scores.each do |name, score|
     if score > max_score  
+      max_score = score 
       winner = name 
     end 
   end
