@@ -201,4 +201,26 @@ def player_stats(player_name)
   pp player_info
 end 
 
-puts player_stats("Alan Anderson")
+def get_largest_shoe_player(game_stats)
+  shoe_size = -1
+  player = ""
+  game_stats.each do |side, data|
+    data[:players].each do |player_stats|
+      if player_stats[:shoe] > shoe_size
+        shoe_size = player_stats[:shoe]
+        player = player_stats[:player_name]
+      end 
+    end 
+  end
+  player 
+end 
+
+puts get_largest_shoe_player(game_hash)
+
+#def big_shoe_rebounds
+ # game_stats = game_hash  
+  #player = get_largest_shoe_player(game_stats)
+  
+#end 
+
+#puts player_stats("Alan Anderson")
