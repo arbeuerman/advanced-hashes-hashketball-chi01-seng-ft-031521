@@ -188,4 +188,18 @@ def player_numbers(team_name)
   jersey_numbers
 end 
 
-puts player_numbers("Brooklyn Nets")
+def player_stats(player_name)
+  game_stats = game_hash
+  player_info = {}
+  game_stats.each do |side, data|
+    data[:players].each do |player_stats|
+      if player_stats[:player_name] == player_name
+        player_info = player_stats[player_name]  
+      end 
+    end 
+    player_info 
+  end 
+  player_shoe_size
+end 
+
+puts player_stats("Alan Anderson")
