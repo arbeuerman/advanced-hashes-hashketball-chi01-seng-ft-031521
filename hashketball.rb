@@ -142,4 +142,17 @@ def num_points_scored(input_player)
   points_scored
 end 
  
+def shoe_size(input_player)
+  game_stats = game_hash
+  points_scored = 0  
+  game_stats.each do |side, data|
+    data[:players].each do |player_stats|
+      if player_stats[:player_name] == input_player
+        points_scored = player_stats[:points]  
+      end 
+    end 
+  end 
+  points_scored
+end 
+ 
 puts num_points_scored "Kemba Walker" 
