@@ -138,7 +138,6 @@ def num_points_scored(input_player)
       if player_stats[:player_name] == input_player
         binding.pry 
         points_scored = player_stats[:points]  
-        binding.pry 
       end 
     end 
   end 
