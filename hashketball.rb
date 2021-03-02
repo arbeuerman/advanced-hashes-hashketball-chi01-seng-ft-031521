@@ -194,7 +194,7 @@ def player_stats(player_name)
   game_stats.each do |side, data|
     data[:players].each do |player_stats|
       if player_stats[:player_name] == player_name
-        player_info = player_stats[player_name]  
+        player_info = player_stats  
       end 
     end 
   end 
