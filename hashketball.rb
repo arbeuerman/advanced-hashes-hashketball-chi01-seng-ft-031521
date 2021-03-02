@@ -166,4 +166,11 @@ def team_colors(team_name)
   team_color  
 end 
  
-puts team_colors "Brooklyn Nets" 
+def teams 
+  game_stats = game_hash
+  game_stats.each do |side, data|
+    puts data[:team_name]
+  end 
+end 
+ 
+teams 
