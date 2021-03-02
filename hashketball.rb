@@ -134,10 +134,10 @@ def num_points_scored(input_player)
   points_scored = nil 
   game_stats.each do |side, data|
     binding.pry 
-    data[:players].each do || 
-    end 
-      binding.pry 
-      points_scored = data[:players][:player_name][:points]  
+    data[:players].each do |stat, info|
+      if info == input_player
+        points_scored = data[:players][input_player][:points]  
+      end 
     end 
   end 
 end 
