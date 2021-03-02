@@ -226,7 +226,7 @@ def get_largest_data_point_helper(game_stats, value_to_find)
       end 
     end 
   end
-  player
+  puts player
 end 
 
 def big_shoe_rebounds
@@ -245,4 +245,8 @@ end
 
 puts big_shoe_rebounds
 
-#bonus methods
+#bonus methods (one is above, the get_largest_data_point_helper)
+def most_points_scored
+  
+end 
+
