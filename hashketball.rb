@@ -133,13 +133,14 @@ def num_points_scored(input_player)
   game_stats = game_hash
   points_scored = nil 
   game_stats.each do |side, data|
-    binding.pry 
+    #binding.pry 
     data[:players].each do |stat, info|
       if info == input_player
         points_scored = data[:players][input_player][:points]  
       end 
     end 
   end 
+  points_scored
 end 
  
 puts num_points_scored "Kemba Walker" 
