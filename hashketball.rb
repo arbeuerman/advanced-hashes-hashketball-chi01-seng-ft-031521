@@ -175,4 +175,11 @@ def team_names
   names 
 end 
  
-team_names 
+def player_numbers(team_name)
+  game_stats = game_hash
+  jersey_numbers = []
+  game_stats.each do |side, data|
+    if data[:team_name] == team_name
+      data[:tea]  
+    end 
+end 
