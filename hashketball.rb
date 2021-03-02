@@ -1,3 +1,4 @@
+require 'pry'
 # Write your code below game_hash
 def game_hash
   {
@@ -127,3 +128,17 @@ def game_hash
 end
 
 # Write code here
+
+def num_points_scored(input_player)
+  game_stats = game_hash
+  points_scored = nil 
+  game_stats.each do |side, data|
+    binding.pry 
+    if data[:players][:player_name] == input_player
+      binding.pry 
+      points_scored = data[:players][:player_name][:points]  
+    end 
+  end 
+end 
+ 
+puts num_points_scored "Kemba Walker" 
