@@ -244,8 +244,6 @@ def big_shoe_rebounds
   rebounds  
 end 
 
-puts big_shoe_rebounds
-
 #bonus methods (one is above, the get_largest_data_point_helper)
 def most_points_scored
   game_stats = game_hash  
@@ -261,6 +259,7 @@ def most_points_scored
   end
   points_scored
 end 
+
 
 puts most_points_scored
 
