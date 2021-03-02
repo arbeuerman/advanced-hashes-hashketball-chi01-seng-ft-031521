@@ -274,5 +274,5 @@ def winning_team
 end 
 
 
-puts most_points_scored
+puts winning_team
 
