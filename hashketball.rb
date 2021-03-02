@@ -306,9 +306,9 @@ end
 def longest_name_steals_a_ton?
   longest_name = player_with_longest_name
   most_steals = get_largest_data_point_helper(game_hash, :steals)
-  does_longest_name_steal_most = FALSE
+  does_longest_name_steal_most = false 
   if longest_name == most_steals
-    does_longest_name_steal_most = TRUE
+    does_longest_name_steal_most = true 
   end 
   does_longest_name_steal_most
 end 
