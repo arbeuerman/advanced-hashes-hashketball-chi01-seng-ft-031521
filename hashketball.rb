@@ -295,7 +295,7 @@ def player_with_longest_name
   game_stats.each do |side, data|
     data[:players].each do |player_stats|
       if player_stats[:player_name].length > max_name_length
-        max_name_length = player_stats[:player_name]
+        max_name_length = player_stats[:player_name].length 
         player = player_stats[:player_name]
       end 
     end 
