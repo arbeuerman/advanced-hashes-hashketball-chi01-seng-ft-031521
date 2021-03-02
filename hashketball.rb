@@ -276,7 +276,9 @@ end
 def winning_team
   max_score = 0 
   winner = ""
+  #add total points for each team 
   team_scores = get_total_points
+  #return the team name with the most points 
   team_scores.each do |name, score|
     if score > max_score  
       max_score = score 
@@ -286,6 +288,20 @@ def winning_team
   winner
 end 
 
+def player_with_longest_name
+  game_stats = game_hash
+  max_name_length = -1
+  player = ""
+  game_stats.each do |side, data|
+    data[:players].each do |player_stats|
+      if player_stats[:player_name].length > max_name_length
+        max_name_length = player_stats[:player_name]
+        player = player_stats[:player_name]
+      end 
+    end 
+  end
+  player
+end 
 
-puts winning_team
+puts player_with_longest_name
 
