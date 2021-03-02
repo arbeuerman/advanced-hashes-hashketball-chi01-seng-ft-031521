@@ -215,9 +215,23 @@ def get_largest_shoe_player(game_stats)
   player 
 end 
 
+def get_largest_data_point_helper(game_stats, value_to_find)
+  start_value = -1
+  player = ""
+  game_stats.each do |side, data|
+    data[:players].each do |player_stats|
+      if player_stats[value_to_find] > start_value
+        start_value = player_stats[value_to_find]
+        player = player_stats[:player_name]
+      end 
+    end 
+  end
+  player
+end 
+
 def big_shoe_rebounds
   game_stats = game_hash  
-  player = get_largest_shoe_player(game_stats)
+  player = get_largest_data_point_helper(game_stats)
   rebounds = 0 
   game_stats.each do |side, data|
     data[:players].each do |player_stats|
@@ -230,3 +244,5 @@ def big_shoe_rebounds
 end 
 
 puts big_shoe_rebounds
+
+#bonus methods
