@@ -168,9 +168,11 @@ end
  
 def team_names 
   game_stats = game_hash
+  names = []
   game_stats.each do |side, data|
-    puts data[:team_name]
+    names << data[:team_name]
   end 
+  names 
 end 
  
 team_names 
