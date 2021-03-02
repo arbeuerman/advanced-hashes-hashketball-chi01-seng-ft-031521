@@ -231,7 +231,7 @@ end
 
 def big_shoe_rebounds
   game_stats = game_hash  
-  player = get_largest_data_point_helper(game_stats)
+  player = get_largest_data_point_helper(game_stats, :shoe)
   rebounds = 0 
   game_stats.each do |side, data|
     data[:players].each do |player_stats|
