@@ -166,4 +166,4 @@ def team_colors(team_name)
   team_color  
 end 
  
-puts team_color "Brooklyn Nets" 
+puts team_colors "Brooklyn Nets" 
