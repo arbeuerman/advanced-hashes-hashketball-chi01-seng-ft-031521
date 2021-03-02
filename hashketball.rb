@@ -248,6 +248,19 @@ puts big_shoe_rebounds
 
 #bonus methods (one is above, the get_largest_data_point_helper)
 def most_points_scored
-  
+  game_stats = game_hash  
+  player = get_largest_data_point_helper(game_stats, :points)
+  puts player #for debugging/verifying 
+  points_scored = 0 
+  game_stats.each do |side, data|
+    data[:players].each do |player_stats|
+      if player_stats[:player_name] == player 
+        points_scored = player_stats[:points]
+      end 
+    end 
+  end
+  points_scored
 end 
+
+puts most_points_scored
 
