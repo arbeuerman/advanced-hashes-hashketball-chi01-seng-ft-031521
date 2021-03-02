@@ -260,6 +260,19 @@ def most_points_scored
   points_scored
 end 
 
+def winning_team
+  game_stats = game_hash  
+  team_scores = {}
+  game_stats.each do |side, data|
+    points_scored = 0 
+    data[:players].each do |player_stats|
+      points_scored += player_stats[:points]
+    end
+    team_scores[data[:team_name]] = points_scored
+  end
+  team_scores
+end 
+
 
 puts most_points_scored
 
