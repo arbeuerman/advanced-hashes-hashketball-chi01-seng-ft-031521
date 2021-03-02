@@ -166,11 +166,11 @@ def team_colors(team_name)
   team_color  
 end 
  
-def teams 
+def team_names 
   game_stats = game_hash
   game_stats.each do |side, data|
     puts data[:team_name]
   end 
 end 
  
-teams 
+team_names 
