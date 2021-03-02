@@ -270,7 +270,7 @@ def winning_team
     end
     team_scores[data[:team_name]] = points_scored
   end
-  team_scores
+  team_scores.max
 end 
 
 
