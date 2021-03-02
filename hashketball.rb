@@ -144,15 +144,15 @@ end
  
 def shoe_size(input_player)
   game_stats = game_hash
-  points_scored = 0  
+  player_shoe_size = 0  
   game_stats.each do |side, data|
     data[:players].each do |player_stats|
       if player_stats[:player_name] == input_player
-        points_scored = player_stats[:points]  
+        points_scored = player_stats[:shoe]  
       end 
     end 
   end 
-  points_scored
+  player_shoe_size
 end 
  
-puts num_points_scored "Kemba Walker" 
+puts shoe_size "Kemba Walker" 
