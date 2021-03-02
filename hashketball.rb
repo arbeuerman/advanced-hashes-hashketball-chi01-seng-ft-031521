@@ -155,4 +155,15 @@ def shoe_size(input_player)
   player_shoe_size
 end 
  
-puts shoe_size "Kemba Walker" 
+def team_colors(team_name) 
+  game_stats = game_hash
+  team_color = 0  
+  game_stats.each do |side, data|
+    if data[:team_name] == team_name
+      team_color = data[:colors]  
+    end 
+  end 
+  team_color  
+end 
+ 
+puts team_color "Brooklyn Nets" 
