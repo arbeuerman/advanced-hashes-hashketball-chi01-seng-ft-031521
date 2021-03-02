@@ -197,9 +197,8 @@ def player_stats(player_name)
         player_info = player_stats[player_name]  
       end 
     end 
-    player_info 
   end 
-  player_shoe_size
+  player_info
 end 
 
 puts player_stats("Alan Anderson")
