@@ -260,10 +260,15 @@ def most_points_scored
   points_scored
 end 
 
+def get_total_points
+  
+end 
+
 def winning_team
   game_stats = game_hash
   max_score = 0 
   winner = ""
+  
   team_scores = {}
   game_stats.each do |side, data|
     points_scored = 0 
