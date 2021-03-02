@@ -217,10 +217,18 @@ end
 
 puts get_largest_shoe_player(game_hash)
 
-#def big_shoe_rebounds
- # game_stats = game_hash  
-  #player = get_largest_shoe_player(game_stats)
-  
-#end 
+def big_shoe_rebounds
+  game_stats = game_hash  
+  player = get_largest_shoe_player(game_stats)
+  rebounds = 0 
+  game_stats.each do |side, data|
+    data[:players].each do |player_stats|
+      if player_stats[:player_name] == player 
+        rebounds = player_stats[:rebounds]
+      end 
+    end 
+  end
+  rebounds  
+end 
 
-#puts player_stats("Alan Anderson")
+puts big_shoe_rebounds
