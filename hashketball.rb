@@ -180,7 +180,7 @@ def player_numbers(team_name)
   jersey_numbers = []
   game_stats.each do |side, data|
     if data[:team_name] == team_name
-      data[:team_name][:players].each do |player_stats|
+      data[:players].each do |player_stats|
         jersey_numbers << player_stats[:number]
       end 
     end 
